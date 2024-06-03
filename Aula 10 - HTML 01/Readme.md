@@ -1,0 +1,1 @@
+Esse é um projeto aonde eu Crio o corpo de uma página sobre lugares turísticos na Europa e Rio grande do Sul. Nela, estou focar apenas no conteúdo da página, adicionando textos, cards, imagens, entre outros. Tudo em HTML.
