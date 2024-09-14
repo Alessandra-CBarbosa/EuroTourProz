@@ -1,0 +1,112 @@
+Nome: Alessandra Cristine Cesar Barbosa.
+
+Respostas do desafio Gupy:
+
+1) Dado a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor sempre será a soma dos 2 valores anteriores (exemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...), escreva um programa na linguagem que desejar onde, informado um número, ele calcule a sequência de Fibonacci e retorne uma mensagem avisando se o número informado pertence ou não a sequência.
+
+
+R:
+ 
+
+def fibonacci_sequence(n):
+    sequence = [0, 1]
+    while sequence[-1] < n:
+        next_value = sequence[-1] + sequence[-2]
+        sequence.append(next_value)
+    return sequence
+
+def is_in_fibonacci(n):
+    sequence = fibonacci_sequence(n)
+    if n in sequence:
+        return f"O número {n} pertence à sequência de Fibonacci."
+    else:
+        return f"O número {n} não pertence à sequência de Fibonacci."
+
+# Exemplo de uso
+numero = int(input("Informe um número: "))
+print(is_in_fibonacci(numero))
+
+
+ 2) Escreva um programa que verifique, em uma string, a existência da letra ‘a’, seja maiúscula ou minúscula, além de informar a quantidade de vezes em que ela ocorre.
+
+R:
+
+def verificar_letra_a(string):
+    
+    count_a = string.count('a')
+    count_A = string.count('A')
+    total_count = count_a + count_A
+    
+    
+    if total_count > 0:
+        return f"A letra 'a' (maiúscula ou minúscula) ocorre {total_count} vezes na string."
+    else:
+        return "A letra 'a' (maiúscula ou minúscula) não ocorre na string."
+
+
+string = input("Digite uma string: ")
+print(verificar_letra_a(string))
+
+3) Observe o trecho de código abaixo: int INDICE = 12, SOMA = 0, K = 1; enquanto K < INDICE faça { K = K + 1; SOMA = SOMA + K; } imprimir(SOMA);
+
+Ao final do processamento, qual será o valor da variável SOMA?
+
+R:
+int INDICE = 12, SOMA = 0, K = 1;
+enquanto K < INDICE faça {
+    K = K + 1;
+    SOMA = SOMA + K;
+}
+imprimir(SOMA);
+
+INDICE = 12
+SOMA = 0
+K = 1
+
+
+K = 2, SOMA = 2
+ K = 3, SOMA = 5
+ K = 4, SOMA = 9
+ K = 5, SOMA = 14
+K = 6, SOMA = 20
+K = 7, SOMA = 27
+K = 8, SOMA = 35
+ K = 9, SOMA = 44
+K = 10, SOMA = 54
+ K = 11, SOMA = 65
+ K = 12, SOMA = 77
+O loop termina quando K atinge o valor de INDICE (12).
+
+Resultado Final:
+Valor de SOMA: 77
+
+4) Descubra a lógica e complete o próximo elemento:
+a) 1, 3, 5, 7, _9__
+b) 2, 4, 8, 16, 32, 64, _128___
+c) 0, 1, 4, 9, 16, 25, 36, __49__
+d) 4, 16, 36, 64, __100__
+e) 1, 1, 2, 3, 5, 8, _13___
+f) 2,10, 12, 16, 17, 18, 19, _20___
+
+
+5) Você está em uma sala com três interruptores, cada um conectado a uma lâmpada em salas diferentes. Você não pode ver as lâmpadas da sala em que está, mas pode ligar e desligar os interruptores quantas vezes quiser. Seu objetivo é descobrir qual interruptor controla qual lâmpada. Como você faria para descobrir, usando apenas duas idas até uma das salas das lâmpadas, qual interruptor controla cada lâmpada? 
+
+R:  
+Passo a Passo:
+Primeira Ida:
+Ligue o primeiro interruptor e deixe-o ligado por alguns minutos.
+Após alguns minutos, desligue o primeiro interruptor e ligue o segundo interruptor.
+Vá até a sala das lâmpadas.
+Na Sala das Lâmpadas:
+A lâmpada que está acesa é controlada pelo segundo interruptor (que está ligado).
+Toque nas outras duas lâmpadas:
+A lâmpada que está quente é controlada pelo primeiro interruptor (que foi ligado e depois desligado).
+A lâmpada que está fria é controlada pelo terceiro interruptor (que nunca foi ligado).
+Resumo:
+Primeiro Interruptor: Lâmpada quente (foi ligada e depois desligada).
+Segundo Interruptor: Lâmpada acesa (está ligada).
+Terceiro Interruptor: Lâmpada fria (nunca foi ligada).
+Dessa forma, você consegue identificar qual interruptor controla qual lâmpada com apenas duas idas até a sala das lâmpadas.
+
+
+
